@@ -87,6 +87,22 @@ namespace FileAndDirectoryInfoExtensionsNamespace
             var destinationDir = Directory.CreateDirectory(destinationPath);
             return dirToCopy.CreateCopyAt(destinationDir);
         }
+        public static DirectoryInfo CopyContentTo(this DirectoryInfo dirToCopy, DirectoryInfo destinationDir)
+        {
+            CopyAllFiles(dirToCopy, destinationDir);
+            CopyAllSubfolders(dirToCopy, destinationDir);
+
+            return destinationDir;
+        }
+        public static DirectoryInfo CopyContentTo(this DirectoryInfo dirToCopy, string destinationDir)
+        {
+            return dirToCopy.CopyContentTo(new DirectoryInfo(destinationDir));
+        }
+        public static FileInfo CreateFile(this DirectoryInfo dirContainingNewFile, string fileName)
+        {
+            using (File.Create(dirContainingNewFile.FullName + @"\" + fileName));
+            return new FileInfo(dirContainingNewFile.FullName + @"\" + fileName);
+        }
 
         private static void CopyAllFiles(DirectoryInfo resourcesDir, DirectoryInfo testDir)
         {
