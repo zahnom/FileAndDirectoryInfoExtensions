@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>zahnom.FileAndDirectoryInfoExtensions</id>
+    <version>1.0.0</version>
+    <title>FileAndDirectoryInfoExtensions</title>
+    <authors>Marc Zahno</authors>
+    <owners>Marc Zahno</owners>
+    <license type="expression">MIT</license>
+    <projectUrl>https://github.com/zahnom/FileAndDirectoryInfoExtensions</projectUrl>
+    <description>Various extensions for FileInfo and DirectoryInfo that could make your life a little bit easier.</description>
+    <releaseNotes>Initial release.</releaseNotes>
+    <copyright>Copyright 2020</copyright>
+    <tags>FileInfo DirectoryInfo extensions copy</tags>
+  </metadata>
+</package>
